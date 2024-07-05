@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Passport Admin</title>
+</head>
+
+<body>
+
+    <div class="background-image"></div>
+
+    <div class="header">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="mcfa_logo.png" alt="Airplane Logo" class="logo-image">
+            </a>
+            <a href="#default" class="title">Mabalacat City Foreign Affairs</a>
+        </div>
+        <div class="header-right">
+          <a class="home" href="/landing_page/landing_page.html">Home</a>
+          <a class="appointment" href="/appointment_form/appointment.html">Appointment</a>
+          <a class="Admin" href="/admin/Admin.html">Admin</a>
+        </div>
+    </div>
+
+    <div class="login-page">
+        <div class="form">
+        <header>Admin login:</header><br>
+          <form class="register-form">
+            <input type="text" placeholder="name"/>
+            <input type="password" placeholder="password"/>
+            <input type="text" placeholder="email address"/>
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form" action="/database/login.php" method="POST">
+            <input type="text" name="username" placeholder="username" required/>
+            <input type="password" name="password" placeholder="password" required/>
+            <button type="submit">login</button>
+        </form>
+        </div>
+      </div>
+
+      <script src="admin.js"></script>
+
+</body>
+</html>

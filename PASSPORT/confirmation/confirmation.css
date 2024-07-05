@@ -1,0 +1,67 @@
+/* General styles (unchanged) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/Central-Business-District.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Confirmation Page Styles */
+.confirmation-container {
+    background-color: #fff;
+    padding: 40px;
+    margin: 100px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.confirmation-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.confirmation-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.confirmation-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #009879;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.confirmation-container a:hover {
+    background-color: #007f66;
+}

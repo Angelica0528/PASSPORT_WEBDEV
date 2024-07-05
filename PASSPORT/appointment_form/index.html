@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.5.1.min.js">
+   
+
+    <title>Passport Online Application</title>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="header">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="mcfa_logo.png" alt="Airplane Logo" class="logo-image">
+            </a>
+            <a href="#default" class="title">Mabalacat City Foreign Affairs</a>
+        </div>
+        <div class="header-right">
+            <a class="home" href="/landing_page/landing_page.html">Home</a>
+            <a class="appointment" href="/appointment_form/appointment.html">Appointment</a>
+            <a class="Admin" href="/admin/Admin.html">Admin</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <header>Passport Appointment Form</header>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+        <form id="regForm" action="/database/submit_form.php" method="POST">
+            <div class="tab">
+                <div class="details personal">
+                    <span class="title">Site, Date, and Time</span>
+                    <div class="fields">
+                        <div class="site">
+                            <label for="site">Site</label>
+                            <select id="site" name="site" required>
+                                <option value="" disabled selected>Select site</option>
+                                <option value="pampanga">Pampanga</option>
+                                <option value="manila">Manila</option>
+                                <option value="cavite">Cavite</option>
+                                <option value="bulacan">Bulacan</option>
+                                <option value="dapdap">Cebu</option>
+                            </select>
+                        </div>
+                        <div class="dateandtime">
+                            <div id="datepicker-container">
+                                <label for="datepicker">Date and Time</label>
+                                <input type="text" id="datepicker" name="date_time" placeholder="Select date and time" required>
+                            </div>
+                            
+                            <div id="available-slots" class="time-slots"></div>
+                            <div id="selected-time" class="selected-time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <span class="title">Personal Details</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Enter last name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="middle_name">Middle Name</label>
+                        <input type="text" id="middle_name" name="middle_name" placeholder="Enter middle name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="birth_date">Date of Birth</label>
+                        <input type="date" id="birth_date" name="birth_date" placeholder="Enter birth date" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option disabled selected>Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="mobile_number">Mobile Number</label>
+                        <input type="text" id="mobile_number" name="mobile_number" placeholder="Enter mobile number" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="civil_status">Civil Status</label>
+                        <select id="civil_status" name="civil_status" required>
+                            <option value="" disabled selected>Select status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="widowed">Widowed</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="province">Province</label>
+                        <input type="text" id="province" name="province" placeholder="Enter your province" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="barangay">Barangay</label>
+                        <input type="text" id="barangay" name="barangay" placeholder="Enter your barangay" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="zip_code">Zip Code</label>
+                        <input type="text" id="zip_code" name="zip_code" placeholder="Enter your zip code" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" placeholder="Enter your country" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="permanent_address">Permanent Address</label>
+                        <input type="text" id="permanent_address" name="permanent_address" placeholder="Enter your permanent address" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <span class="title">Family Details</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="father_name">Father Name</label>
+                        <input type="text" id="father_name" name="father_name" placeholder="Enter father name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="mother_name">Mother Name</label>
+                        <input type="text" id="mother_name" name="mother_name" placeholder="Enter mother name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="spouse_name">Spouse Name</label>
+                        <input type="text" id="spouse_name" name="spouse_name" placeholder="Enter spouse name" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <div class="details address">
+                    <span class="title">Application Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="application_type">Application Type</label>
+                            <select id="application_type" name="application_type" required>
+                                <option value="" disabled selected>Select type</option>
+                                <option value="renew">Renew</option>
+                                <option value="new">New</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="emergency_contact">Emergency Contact Person</label>
+                            <input type="text" id="emergency_contact" name="emergency_contact" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="emergency_mobile_no">Emergency Contact Number</label>
+                            <input type="text" id="emergency_mobile_no" name="emergency_mobile_no" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                  <button type="submit" id="nextBtn" onclick="nextPrev(1)">Submit</button>
+                </div>
+              </div>
+
+              <!-- Circles which indicate the steps of the form: -->
+              <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+              </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="pass.js"></script>
+</body>
+</html>

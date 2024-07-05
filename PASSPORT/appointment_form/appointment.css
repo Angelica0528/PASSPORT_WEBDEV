@@ -1,0 +1,188 @@
+/* General styles (unchanged) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/Central-Business-District.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.header {
+    background-color: #07070792;
+    width: 100%;
+    padding: 20px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.header .logo-image {
+    height: 50px; /* Base height */
+    width: auto; /* Keeps aspect ratio */
+    transform: scale(2); /* Scale the image if needed */
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.header .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header .header-right {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.header .header-right a {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0px 5px;
+    color: #ffffff;
+    margin-right: 20px;
+    transition: background-color 0.3s;
+}
+
+.header .header-right a:hover {
+    background-color: darkgreen;
+    border-radius: 4px;
+}
+
+.header .header-right a.appointment {
+    background-color: #69dc63;
+    color: white;
+    border-radius: 4px;
+    margin-right: 50px;
+}
+
+.line{
+    position: absolute;
+    top: 22%;
+    left: 8%;
+}
+
+.box1{
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+}
+
+
+.box2{
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.box3{
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+}
+
+.left{
+    flex-basis: 60%;
+}
+
+.left h1{
+   
+    font-size: 7rem;
+    line-height: 7rem;
+    color: white;
+}
+
+.left h3{
+    line-height: 2.5rem;
+    color: white;
+    margin-left: 20px;
+}
+
+.left button{
+    background-color: #69dc63cd;
+    color: #ffff;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    
+}
+span{
+    position: relative;
+    top: -.4rem; 
+}
+i{
+    font-size: 3rem;
+    margin-right: 10px;
+}
+
+
+.right{
+    flex-basis: 50%;
+}
+
+.right img{
+    width: 120%;
+    margin-right: 100%;
+    margin-top: 55px;
+}
+
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}

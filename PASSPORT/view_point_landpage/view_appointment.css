@@ -1,0 +1,150 @@
+/* General styles */
+/* General styles (unchanged) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    background: #969698;
+    background-image: url('./Central-Business-District.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 150vh;
+}
+
+.TB{
+    position: relative;
+    top: 10%;
+    justify-content: center;
+    background-color: #ffffff;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-top: 1.5%;
+    
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+
+.header {
+    background-color: #07070792;
+    width: 100%;
+    padding: 20px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.header .logo-image {
+    height: 50px; /* Base height */
+    width: auto; /* Keeps aspect ratio */
+    transform: scale(2); /* Scale the image if needed */
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.header .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header .header-right {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.header .header-right a {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0px 5px;
+    color: #ffffff;
+    margin-right: 20px;
+    transition: background-color 0.3s;
+}
+
+.header .header-right a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.header .header-right a.home {
+    background-color: #69dc63;
+    color: white;
+    border-radius: 4px;
+    margin-right: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #009879;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
